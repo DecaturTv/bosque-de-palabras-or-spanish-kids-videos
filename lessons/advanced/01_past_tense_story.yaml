@@ -1,0 +1,113 @@
+lesson_id: advanced_01_past_tense_story
+tier: advanced
+order: 1
+topic: "Past Tense Storytelling"
+clearing: "Clearing of Stories"
+duration_target_seconds: 240
+
+intro:
+  hook_line_es: "¡Hola, aventureros!"
+  hook_line_en: "Hello, adventurers!"
+  topic_tease_es: "Hoy contamos la historia de lo que pasó ayer en el bosque."
+  topic_tease_en: "Today we tell the story of what happened yesterday in the forest."
+
+vocab:
+  - id: past_fue
+    spanish: fue
+    english: "went / was"
+    image_asset: assets/icons/past_tense/fue.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Ayer, Chispa fue al bosque de palabras."
+    example_sentence_en: "Yesterday, Chispa went to the Word Forest."
+  - id: past_comio
+    spanish: "comió"
+    english: ate
+    image_asset: assets/icons/past_tense/comio.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Chispa comió unas moras dulces."
+    example_sentence_en: "Chispa ate some sweet berries."
+  - id: past_jugo
+    spanish: "jugó"
+    english: played
+    image_asset: assets/icons/past_tense/jugo.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Chispa jugó con sus amigos animales."
+    example_sentence_en: "Chispa played with his animal friends."
+  - id: past_encontro
+    spanish: "encontró"
+    english: found
+    image_asset: assets/icons/past_tense/encontro.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Chispa encontró un mapa viejo."
+    example_sentence_en: "Chispa found an old map."
+  - id: past_aprendio
+    spanish: "aprendió"
+    english: learned
+    image_asset: assets/icons/past_tense/aprendio.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Chispa aprendió una palabra nueva: aventura."
+    example_sentence_en: "Chispa learned a new word: adventure."
+  - id: past_conto
+    spanish: "contó"
+    english: told
+    image_asset: assets/icons/past_tense/conto.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Por la noche, Chispa contó la historia a todos."
+    example_sentence_en: "At night, Chispa told the story to everyone."
+
+spaced_repetition:
+  recycle_vocab_ids: []   # first advanced lesson — nothing at this tier to recycle yet
+
+song:
+  template: four_line_intro_plus_refrain
+  bpm: 90
+  verses:
+    - lines:
+        - es: "Fue, fue, caminando por el sendero"
+          vocab_id: past_fue
+          match_object_asset: assets/icons/past_tense/path.svg
+        - es: "Comió, comió, moras de un arbusto entero"
+          vocab_id: past_comio
+          match_object_asset: assets/icons/past_tense/berries.svg
+        - es: "Jugó, jugó, con sus amigos del bosque"
+          vocab_id: past_jugo
+          match_object_asset: assets/icons/past_tense/friends.svg
+      refrain_es: "¡Vamos a descubrir, la historia de ayer!"
+    - lines:
+        - es: "Encontró, encontró, un mapa entre las hojas"
+          vocab_id: past_encontro
+          match_object_asset: assets/icons/past_tense/map.svg
+        - es: "Aprendió, aprendió, palabras nuevas y hermosas"
+          vocab_id: past_aprendio
+          match_object_asset: assets/icons/past_tense/book.svg
+        - es: "Contó, contó, la historia junto al fuego"
+          vocab_id: past_conto
+          match_object_asset: assets/icons/past_tense/campfire.svg
+      refrain_es: "¡Vamos a descubrir, la historia de ayer!"
+  final_chorus:
+    flash_all_objects: true
+
+quiz:
+  - type: multiple_choice
+    prompt_es: "¿Adónde fue Chispa ayer?"
+    options: ["al bosque", "a la ciudad", "a la playa"]
+    correct: "al bosque"
+    reward_animation: yellow_starburst
+  - type: multiple_choice
+    prompt_es: "¿Qué encontró Chispa?"
+    options: ["una flor mágica", "un mapa viejo", "una piedra"]
+    correct: "un mapa viejo"
+    reward_animation: yellow_starburst
+
+recap:
+  summary_line_es: "Hoy aprendiste seis verbos en pasado: fue, comió, jugó, encontró, aprendió y contó."
+  summary_line_en: "Today you learned six past-tense verbs: went, ate, played, found, learned, and told."
+  vocab_ids: [past_fue, past_comio, past_jugo, past_encontro, past_aprendio, past_conto]
+
+tts:
+  rate: natural
+  voice: es-ES-standard
+
+visuals:
+  background: assets/backgrounds/clearing_stories.png
+  palette: default
