@@ -1,0 +1,7 @@
+pydantic>=2.0
+PyYAML>=6.0
+pytest>=8.0
+
+# Added in the pipeline build step (not required yet):
+# gTTS>=2.5
+# moviepy>=1.0

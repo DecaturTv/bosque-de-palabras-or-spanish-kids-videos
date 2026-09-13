@@ -1,0 +1,95 @@
+lesson_id: beginner_01_greetings
+tier: beginner
+order: 1
+topic: Greetings
+clearing: "Clearing of Greetings"
+duration_target_seconds: 150
+
+intro:
+  hook_line_es: "¡Hola, exploradores!"
+  hook_line_en: "Hello, explorers!"
+  topic_tease_es: "Hoy aprendemos a saludar en el bosque."
+  topic_tease_en: "Today we learn to greet each other in the forest."
+
+vocab:
+  - id: greeting_hola
+    spanish: hola
+    english: hello
+    phonetic_hint: "OH-lah"
+    image_asset: assets/icons/greetings/hola.svg
+    audio_cue: chime_soft
+    example_sentence_es: "¡Hola, amigo!"
+    example_sentence_en: "Hello, friend!"
+  - id: greeting_adios
+    spanish: adiós
+    english: goodbye
+    phonetic_hint: "ah-dee-OHS"
+    image_asset: assets/icons/greetings/adios.svg
+    audio_cue: chime_soft
+    example_sentence_es: "¡Adiós, hasta pronto!"
+    example_sentence_en: "Goodbye, see you soon!"
+  - id: greeting_por_favor
+    spanish: "por favor"
+    english: please
+    phonetic_hint: "por fah-VOR"
+    image_asset: assets/icons/greetings/por_favor.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Ayúdame, por favor."
+    example_sentence_en: "Help me, please."
+  - id: greeting_gracias
+    spanish: gracias
+    english: thank you
+    phonetic_hint: "GRAH-see-ahs"
+    image_asset: assets/icons/greetings/gracias.svg
+    audio_cue: chime_soft
+    example_sentence_es: "¡Gracias por venir!"
+    example_sentence_en: "Thanks for coming!"
+  - id: greeting_si
+    spanish: "sí"
+    english: "yes"
+    phonetic_hint: "SEE"
+    image_asset: assets/icons/greetings/si.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Sí, quiero jugar."
+    example_sentence_en: "Yes, I want to play."
+
+spaced_repetition:
+  recycle_vocab_ids: []   # first lesson — nothing to recycle yet
+
+song:
+  template: four_line_intro_plus_refrain
+  bpm: 90
+  verses:
+    - lines:
+        - es: "Hola, hola, cuando el sol despierta"
+          vocab_id: greeting_hola
+          match_object_asset: assets/icons/greetings/sunrise.svg
+        - es: "Gracias, gracias, por la puerta abierta"
+          vocab_id: greeting_gracias
+          match_object_asset: assets/icons/greetings/open_door.svg
+        - es: "Por favor, por favor, pidiendo con calma"
+          vocab_id: greeting_por_favor
+          match_object_asset: assets/icons/greetings/calm_hands.svg
+      refrain_es: "¡Vamos a descubrir, los saludos hoy!"
+  final_chorus:
+    flash_all_objects: true
+
+quiz:
+  - type: multiple_choice
+    prompt_es: "¿Cómo dices 'hello'?"
+    options: [hola, adiós, gracias]
+    correct: hola
+    reward_animation: yellow_starburst
+
+recap:
+  summary_line_es: "Hoy aprendiste: hola, adiós, por favor, gracias, sí."
+  summary_line_en: "Today you learned: hello, goodbye, please, thank you, yes."
+  vocab_ids: [greeting_hola, greeting_adios, greeting_por_favor, greeting_gracias, greeting_si]
+
+tts:
+  rate: slow
+  voice: es-ES-standard
+
+visuals:
+  background: assets/backgrounds/clearing_greetings.png
+  palette: default

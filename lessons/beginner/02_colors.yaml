@@ -1,0 +1,108 @@
+lesson_id: beginner_02_colors
+tier: beginner
+order: 2
+topic: Colors
+clearing: "Clearing of Colors"
+duration_target_seconds: 180
+
+intro:
+  hook_line_es: "¡Hola, exploradores!"
+  hook_line_en: "Hello, explorers!"
+  topic_tease_es: "Hoy descubrimos los colores del bosque."
+  topic_tease_en: "Today we discover the colors of the forest."
+
+vocab:
+  - id: color_rojo
+    spanish: rojo
+    english: red
+    phonetic_hint: "ROH-hoh"
+    image_asset: assets/icons/colors/rojo.svg
+    audio_cue: chime_soft
+    example_sentence_es: "El sol es rojo."
+    example_sentence_en: "The sun is red."
+  - id: color_azul
+    spanish: azul
+    english: blue
+    phonetic_hint: "ah-SOOL"
+    image_asset: assets/icons/colors/azul.svg
+    audio_cue: chime_soft
+    example_sentence_es: "El cielo es azul."
+    example_sentence_en: "The sky is blue."
+  - id: color_verde
+    spanish: verde
+    english: green
+    phonetic_hint: "VEHR-deh"
+    image_asset: assets/icons/colors/verde.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Las hojas son verdes."
+    example_sentence_en: "The leaves are green."
+  - id: color_amarillo
+    spanish: amarillo
+    english: yellow
+    phonetic_hint: "ah-mah-REE-yoh"
+    image_asset: assets/icons/colors/amarillo.svg
+    audio_cue: chime_soft
+    example_sentence_es: "El sol también es amarillo."
+    example_sentence_en: "The sun is also yellow."
+  - id: color_morado
+    spanish: morado
+    english: purple
+    phonetic_hint: "moh-RAH-doh"
+    image_asset: assets/icons/colors/morado.svg
+    audio_cue: chime_soft
+    example_sentence_es: "La flor es morada."
+    example_sentence_en: "The flower is purple."
+
+spaced_repetition:
+  recycle_vocab_ids: [greeting_hola]   # from beginner_01_alphabet or an earlier greetings lesson
+
+song:
+  template: four_line_intro_plus_refrain
+  bpm: 90
+  verses:
+    - lines:
+        - es: "Rojo, rojo, como el sol de la tarde"
+          vocab_id: color_rojo
+          match_object_asset: assets/icons/colors/sun_red.svg
+        - es: "Azul, azul, como el cielo que no arde"
+          vocab_id: color_azul
+          match_object_asset: assets/icons/colors/sky_blue.svg
+        - es: "Verde, verde, como las hojas que caen"
+          vocab_id: color_verde
+          match_object_asset: assets/icons/colors/leaf_green.svg
+      refrain_es: "¡Vamos a descubrir, los colores hoy!"
+    - lines:
+        - es: "Amarillo, amarillo, como un rayo de miel"
+          vocab_id: color_amarillo
+          match_object_asset: assets/icons/colors/honey_yellow.svg
+        - es: "Morado, morado, como flores de abril"
+          vocab_id: color_morado
+          match_object_asset: assets/icons/colors/flower_purple.svg
+      refrain_es: "¡Vamos a descubrir, los colores hoy!"
+  final_chorus:
+    flash_all_objects: true
+
+quiz:
+  - type: multiple_choice
+    prompt_es: "¿De qué color es el sol?"
+    options: [rojo, azul, verde]
+    correct: rojo
+    reward_animation: yellow_starburst
+  - type: multiple_choice
+    prompt_es: "¿De qué color es el cielo?"
+    options: [morado, azul, amarillo]
+    correct: azul
+    reward_animation: yellow_starburst
+
+recap:
+  summary_line_es: "Hoy aprendiste: rojo, azul, verde, amarillo, morado."
+  summary_line_en: "Today you learned: red, blue, green, yellow, purple."
+  vocab_ids: [color_rojo, color_azul, color_verde, color_amarillo, color_morado]
+
+tts:
+  rate: slow
+  voice: es-ES-standard
+
+visuals:
+  background: assets/backgrounds/clearing_colors.png
+  palette: default

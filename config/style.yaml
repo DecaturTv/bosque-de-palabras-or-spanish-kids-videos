@@ -1,0 +1,71 @@
+# Single source of truth for visual/audio style constants.
+# Lesson files should never hardcode these values — reference "default"
+# or override sparingly, only when a lesson has a documented reason to.
+
+palette:
+  primary: "#E8703A"      # warm orange — Chispa, emphasis text
+  secondary: "#4A7856"    # forest green — backgrounds, foliage
+  accent: "#F4C95D"       # soft yellow — correct-answer flashes, rewards
+  neutral: "#FAF3E6"      # cream — text card backgrounds
+  avoid: ["saturated_red", "black"]
+
+shapes:
+  style: flat_rounded_vector
+  outline_width_px_1080p: [4, 6]
+
+typography:
+  spanish:
+    weight: bold
+    size: large
+    style: rounded_sans_serif
+  english:
+    weight: regular
+    size: small
+    color: muted_gray
+    style: rounded_sans_serif  # same family as spanish
+  max_onscreen_lines: 2
+
+animation:
+  pop_in_easing: ease_out_back
+  chispa_idle_bounce: true
+  vocab_pop_in_cue: soft_chime
+  correct_answer_animation: yellow_starburst
+
+mascot:
+  name: "Chispa"
+  species: "fox"
+  catchphrase_es: "¡Vamos a descubrir!"
+  position: bottom_left_or_bottom_center   # never overlaps vocab text
+  personality: [curious, a_little_clumsy, treats_new_words_like_treasure]
+
+world:
+  name: "El Bosque de Palabras"
+  establishing_shot: assets/backgrounds/bosque_establishing.png
+  unlocks_clearing_per_topic: true
+
+music:
+  bpm_default: 90
+  tier_instrumentation:
+    beginner: simplest
+    intermediate: moderate
+    advanced: richest
+
+tts:
+  rate_by_tier:
+    beginner: slow
+    intermediate: natural
+    advanced: natural
+
+tiers:
+  beginner:
+    vocab_per_video_min: 5
+    vocab_per_video_max: 8
+    requires_phonetic_hints: true
+  intermediate:
+    vocab_per_video_min: 5
+    vocab_per_video_max: 10
+    requires_phonetic_hints: false
+  advanced:
+    vocab_per_video_min: 5
+    vocab_per_video_max: 12
+    requires_phonetic_hints: false
