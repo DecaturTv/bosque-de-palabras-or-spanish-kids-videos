@@ -1,8 +1,5 @@
-"""Command-line entry point.
-
-Currently supports lesson validation only. Video rendering
-(pipeline.py, tts.py, song.py, visuals.py) lands in the next build
-step once the schema is confirmed.
+"""Command-line entry point: validate lesson configs and render them
+to .mp4.
 """
 from __future__ import annotations
 
@@ -10,6 +7,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from bosque.pipeline import render_lesson_file
 from bosque.schema import load_lesson, load_lesson_library
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -46,11 +44,18 @@ def main() -> None:
         "path", nargs="?", default=None, help="Path to a single lesson YAML file"
     )
 
+    render_p = sub.add_parser("render", help="Render a lesson config to .mp4")
+    render_p.add_argument("path", help="Path to a lesson YAML file")
+    render_p.add_argument("--output-dir", default=None, help="Override output directory")
+
     args = parser.parse_args()
 
     if args.command == "validate":
         code = validate_one(args.path) if args.path else validate_all()
         sys.exit(code)
+    elif args.command == "render":
+        out_path = render_lesson_file(args.path, args.output_dir)
+        print(f"Wrote {out_path}")
 
 
 if __name__ == "__main__":

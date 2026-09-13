@@ -13,7 +13,7 @@ from pathlib import Path
 import yaml
 from pydantic import BaseModel, Field, model_validator
 
-STYLE_PATH = Path(__file__).resolve().parents[2] / "config" / "style.yaml"
+from bosque.style import load_style
 
 
 class Tier(str, Enum):
@@ -143,11 +143,6 @@ class Lesson(BaseModel):
         return self
 
 
-def _load_style() -> dict:
-    with open(STYLE_PATH, encoding="utf-8") as f:
-        return yaml.safe_load(f)
-
-
 def load_lesson(path: str | Path) -> Lesson:
     """Parse + validate a single lesson file against the schema and
     the tier-specific pedagogical rules in config/style.yaml.
@@ -157,7 +152,7 @@ def load_lesson(path: str | Path) -> Lesson:
         raw = yaml.safe_load(f)
     lesson = Lesson.model_validate(raw)
 
-    style = _load_style()
+    style = load_style()
     tier_rules = style["tiers"][lesson.tier.value]
 
     vocab_count = len(lesson.vocab)
