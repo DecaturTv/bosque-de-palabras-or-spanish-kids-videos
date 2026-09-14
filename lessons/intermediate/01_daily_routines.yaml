@@ -1,0 +1,113 @@
+lesson_id: intermediate_01_daily_routines
+tier: intermediate
+order: 1
+topic: "Daily Routines"
+clearing: "Clearing of Routines"
+duration_target_seconds: 200
+
+intro:
+  hook_line_es: "¡Hola de nuevo, amigos!"
+  hook_line_en: "Hello again, friends!"
+  topic_tease_es: "Hoy descubrimos la rutina diaria de Chispa."
+  topic_tease_en: "Today we discover Chispa's daily routine."
+
+vocab:
+  - id: routine_despierto
+    spanish: "me despierto"
+    english: "I wake up"
+    image_asset: assets/icons/routines/despierto.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Cada mañana, me despierto temprano."
+    example_sentence_en: "Every morning, I wake up early."
+  - id: routine_levanto
+    spanish: "me levanto"
+    english: "I get up"
+    image_asset: assets/icons/routines/levanto.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Después, me levanto de la cama."
+    example_sentence_en: "Then, I get up from bed."
+  - id: routine_visto
+    spanish: "me visto"
+    english: "I get dressed"
+    image_asset: assets/icons/routines/visto.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Me visto con ropa cómoda."
+    example_sentence_en: "I get dressed in comfortable clothes."
+  - id: routine_desayuno
+    spanish: desayuno
+    english: "I eat breakfast"
+    image_asset: assets/icons/routines/desayuno.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Desayuno pan y fruta."
+    example_sentence_en: "I eat bread and fruit for breakfast."
+  - id: routine_voy
+    spanish: voy
+    english: "I go"
+    image_asset: assets/icons/routines/voy.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Voy a la escuela caminando."
+    example_sentence_en: "I go to school walking."
+  - id: routine_duermo
+    spanish: duermo
+    english: "I sleep"
+    image_asset: assets/icons/routines/duermo.svg
+    audio_cue: chime_soft
+    example_sentence_es: "Por la noche, duermo ocho horas."
+    example_sentence_en: "At night, I sleep eight hours."
+
+spaced_repetition:
+  recycle_vocab_ids: []   # first intermediate lesson — nothing at this tier to recycle yet
+
+song:
+  template: four_line_intro_plus_refrain
+  bpm: 90
+  verses:
+    - lines:
+        - es: "Me despierto, me despierto, cuando sale el sol"
+          vocab_id: routine_despierto
+          match_object_asset: assets/icons/routines/sunrise.svg
+        - es: "Me levanto, me levanto, con mucho valor"
+          vocab_id: routine_levanto
+          match_object_asset: assets/icons/routines/bed.svg
+        - es: "Me visto, me visto, listo para jugar"
+          vocab_id: routine_visto
+          match_object_asset: assets/icons/routines/clothes.svg
+      refrain_es: "¡Vamos a descubrir, la rutina de hoy!"
+    - lines:
+        - es: "Desayuno, desayuno, pan con mermelada"
+          vocab_id: routine_desayuno
+          match_object_asset: assets/icons/routines/breakfast.svg
+        - es: "Voy, voy, caminando por la entrada"
+          vocab_id: routine_voy
+          match_object_asset: assets/icons/routines/path.svg
+        - es: "Duermo, duermo, bajo luz plateada"
+          vocab_id: routine_duermo
+          match_object_asset: assets/icons/routines/moon.svg
+      refrain_es: "¡Vamos a descubrir, la rutina de hoy!"
+  final_chorus:
+    flash_all_objects: true
+
+quiz:
+  - type: multiple_choice
+    prompt_es: "¿Qué dices cuando comes por la mañana?"
+    options: [desayuno, duermo, voy]
+    correct: desayuno
+    reward_animation: yellow_starburst
+  - type: multiple_choice
+    prompt_es: "¿Qué haces por la noche?"
+    options: ["me visto", duermo, "me levanto"]
+    correct: duermo
+    reward_animation: yellow_starburst
+
+recap:
+  summary_line_es: "Hoy aprendiste la rutina: me despierto, me levanto, me visto, desayuno, voy y duermo."
+  summary_line_en: "Today you learned the routine: I wake up, I get up, I get dressed, I eat breakfast, I go, and I sleep."
+  vocab_ids: [routine_despierto, routine_levanto, routine_visto, routine_desayuno, routine_voy, routine_duermo]
+
+tts:
+  rate: natural
+  voice: es-ES-standard
+
+visuals:
+  background: assets/backgrounds/clearing_routines.png
+  palette: default
